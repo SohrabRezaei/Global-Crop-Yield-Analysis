@@ -1,4 +1,4 @@
-# Global-Crop-Yield-Analysis
+# Global Crop Yield Analysis
 ## Team members
 - **[Bilal Rizvi](https://github.com/brizvi4)**
 - **[Neda Ahmadi J.](https://github.com/NedaAJ)**
@@ -15,14 +15,14 @@ Agriculture is extremely important to the world economy. Understanding global ag
 ## Description of the Source Data
 We found our datasets for this project on Kaggle: [Crop_Yield_Prediction_Dataset](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset?select=yield.csv)
 
-We will be using Amazon Web Wervices to store our data.
+We will be using Amazon Web Services to store our data.
 
 *All dataset (publicly available dataset) on Kaggle are taken from [FAO (Food and Agriculture Organization)](http://www.fao.org/home/en/) and [World Data Bank](https://data.worldbank.org/).*
 
 ## Communication Protocols
 We meet once a week in person and go over details fo the project for upcoming weeks. We also communicate regularly via Whatsapp, Slack and do regular Zoom sessions to keep each other informed about the status of our respective aspects of the project. 
 
-Here is a picture of us collabroting:
+Here is a picture of us collaborating:
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Da_Dream_Team.jpg">
 </p>
@@ -58,7 +58,7 @@ Here, you can find the sketch of the dashboard:
 </p>
 
 ## Machine Learning
-
+You can find the Machine Learning Diagram here: [Machine Learning Model.pdf](https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Machine%20Learning%20Model.pdf)
 
 ## Database
 We will be using PostgreSQL for our project. We have primary-composit keys. The tables have Many-to-Many relationship. Here you can find the ERD for our database:
