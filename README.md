@@ -58,7 +58,7 @@ Here, you can find the sketch of the dashboard:
 </p>
 
 ## Machine Learning
-You can find the Machine Learning Diagram here: [Machine Learning Model.pdf](https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Machine%20Learning%20Model.pdf)
+You can find the Machine Learning Diagram here:
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Machine-Learning-Model.png">
 </p>
