@@ -60,6 +60,10 @@ Here, you can find the sketch of the dashboard:
 ## Machine Learning
 You can find the Machine Learning Diagram here: [Machine Learning Model.pdf](https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Machine%20Learning%20Model.pdf)
 
+<p align="center">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Machine-Learning-Model.png">
+</p>
+
 ## Database
 We will be using PostgreSQL for our project. We have primary-composit keys. The tables have Many-to-Many relationship. Here you can find the ERD for our database:
 <p align="center">
