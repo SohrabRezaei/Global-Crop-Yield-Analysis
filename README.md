@@ -58,7 +58,7 @@ Here, you can find the sketch of the dashboard:
 </p>
 
 ## Machine Learning
-You can find the Machine Learning Diagram here:
+You can find the Machine Learning Diagram here: 
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Machine-Learning-Model.png">
 </p>
@@ -68,7 +68,6 @@ We will be using PostgreSQL for our project. We have primary-composit keys. The 
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/ERD.png">
 </p>
-
 
 
 
