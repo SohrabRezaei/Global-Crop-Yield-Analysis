@@ -24,7 +24,7 @@ We meet once a week in person and go over details fo the project for upcoming we
 
 Here is a picture of us collaborating:
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Da_Dream_Team.jpg">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Team_pics/Aura.jpg">
 </p>
 
 ## Initial Tools & Technologies
@@ -51,22 +51,22 @@ We will be building a dashboard containing interactive visualization and forecas
 Here, you can find the sketch of the dashboard:
 
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/dashboard.png">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/forecasting.png">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/weather_analysis.png">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/country_analysis.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/dashboard.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/forecasting.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/weather_analysis.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/country_analysis.png">
 </p>
 
 ## Machine Learning
 You can find the Machine Learning Diagram here: 
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Machine-Learning-Model.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/Machine-Learning-Model.png">
 </p>
 
 ## Database
 We will be using PostgreSQL for our project. We have primary-composit keys. The tables have Many-to-Many relationship. Here you can find the ERD for our database:
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/ERD.png">
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Deliverable_1/ERD.png">
 </p>
 
 
