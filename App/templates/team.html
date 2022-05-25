@@ -19,7 +19,7 @@
 
 </head> 
 
-<body class="app">   	
+<body class="app" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">   	
     <header class="app-header fixed-top">	   	            
         <div class="app-header-inner">  
 	        <div class="container-fluid py-2">
@@ -154,6 +154,7 @@
 
 
                             <!--**********************************************Team Section**********************************************-->
+    <div class="app-wrapper">
 	<section id="speakers-section" class="speakers-section section">
 		<div class="container">
 			<h3 class="section-heading text-center mb-3">Meet our Team</h3>
@@ -161,13 +162,16 @@
 			<div class="row">
 				<div class="col-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Bilal.jpeg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Bilal.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Bilal Rizvi</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Data Analyst</div>
 								<div class="meta">Mathematics</div>
 							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p>"I graduated from McGill in Fall of 2018 with a BSc in Mathematics and a minor in Economics. After graduation, I started working as an Application Support Analyst at TD. While I really liked what I was doing, I realized that my real interest and skills aligned with a field related to Mathematics. Thus, after completing my two years at TD, I decided to join the Data Analytics bootcamp offered by University of Toronto SCS to brush up and expand on my skillset. After this bootcamp, I intend on doing advanced courses in machine learning and applying my mathematical skills in this field."</p>
+                            </div><!--//member-desc-->
 						</div><!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
@@ -180,7 +184,7 @@
 				</div><!--//col-->
 				<div class="col-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Neda.jpeg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Neda.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Neda Ahmadi J.</h5>
 							<div class="card-text mb-3">
@@ -199,13 +203,16 @@
 				</div><!--//col-->
 				<div class="col-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/" class="card-img-top rounded img-fluid" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Rabab Handa</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Data Engineer</div>
 								<div class="meta">Mechanical Engineering</div>
 							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p>Xiaoying is the UX/UI designer behind AppKit Landing. She makes <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/" target="_blank">free Bootstrap themes</a> for developers. You can find her sharing useful UX and webdev related content on <a href="https://twitter.com/3rdwave_themes" target="_blank">Twitter</a> and <a href="https://www.facebook.com/3rdwavethemes/" target="_blank">Facebook</a>. Follow her if you like what she does!</p>
+                            </div><!--//member-desc-->
 						</div><!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
@@ -218,13 +225,16 @@
 				</div><!--//col-->
 				<div class="col-6 col-lg-3 mb-4">
 					<div class="card rounded-0">
-						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Sohrab.jpeg" class="card-img-top rounded-0" alt=""></a>
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../assets/images/profiles/Sohrab.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
 						<div class="card-body">
 							<h5 class="card-title mb-2">Sohrab Rezaei</h5>
 							<div class="card-text mb-3">
 								<div class="meta">Data Analyst</div>
 								<div class="meta">Chemical Engineering</div>
 							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p>"I got my bachelor's in Chemical Engineering from Iran. I then moved to Canada in 2019 in order to obtain a master's in Chemical Engineering from Western University specializing in Environmental & Green Engineering. I began working as a construction project coordinator last year. However, after discovering Canada's data science market demand and recognizing my aptitude for working in such a field, I decided to join this Bootcamp."</p>
+                            </div><!--//member-desc-->
 						</div><!--//card-->
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
@@ -240,6 +250,8 @@
 		</div><!--//container-->
 		
 	</section><!--//speakers-section-->
+    </div><!--//app-wrapper-->
+
 
     <!-- Javascript -->          
     <script src="../assets/plugins/popper.min.js"></script>
