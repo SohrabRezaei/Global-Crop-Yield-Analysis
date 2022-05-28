@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Interactive Dashboard for your farming questions">
     <meta name="author" content="Da Dream Team">    
+    <!--Meta Slider-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../assets/images/favicon.ico"> 
     
     <!-- FontAwesome JS-->
@@ -16,6 +18,10 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/slider.css">
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script> 
 
 </head> 
 
@@ -154,7 +160,116 @@
 
 
                             <!--**********************************************MAIN CODE GOES HERE**********************************************-->
+                            <div class="app-wrapper">
+                                <!-- Pop up Introduction -->
+                                <div class="app-content pt-3 p-md-3 p-lg-4">
+                                    <div class="container-xl">
+                                        
+                                        <h1 class="app-page-title">Yield Prediction</h1>
+                                        
+                                        <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
+                                            <div class="inner">
+                                                <div class="app-card-body p-3 p-lg-4">
+                                                    <h3 class="mb-3">Predict the yield of your crop</h3>
+                                                    <div class="row gx-5 gy-3">
+                                                        <div class="col-12">							        
+                                                            <div>You can predict the yield of the crop you want to grow anywhere! Simply drag the sliders to match the environmental conditions to your area and choose a crop</div>
+                                                        </div><!--//col-->
+                                                    </div><!--//row-->
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div><!--//app-card-body-->
+                                                
+                                            </div><!--//inner-->
+                                        </div><!--//app-card-->
+                                                                                                        <!-- Map Section -->
+                                        <div class="row g-4 mb-4">
+                                            <div class="col-8">
+                                                <div class="app-card app-card-chart h-100 shadow-sm">
+                                                    <div class="app-card-header p-3">
+                                                        <div class="row justify-content-between align-items-center">
+                                                            <div class="col-auto">
+                                                                <h4 class="app-card-title">Total Harvest of Crop</h4>
+                                                            </div><!--//col-->
+                                                        </div><!--//row-->
+                                                    </div><!--//app-card-header-->
+                                                    <div id="recomMap"></div>
+                                                </div><!--//app-card-->
+                                            </div><!--//col-->
+                        
+                                            <div class="col-6 col-md-4">
+                                                <div class="app-card app-card-chart h-100 shadow-sm">
+                                                    <div class="app-card-header p-3">
+                                                        <div class="row justify-content-between align-items-center">
+                                                            <!-- <div class="col-auto"> -->
 
+                            <!--**********************************************SLIDERS**********************************************-->                                                                
+                                                                <h4 class="app-card-title">Environmental Inputs</h4>
+
+                                                                <div class="app-card-body p-3 p-lg-4">
+                                                                    
+                                                                    <!--temp-->
+                                                                    <div class="tempcontainer">
+                                                                        <input type="range" min="1" max="100" value="50" class="temp" id="Temp">
+                                                                        <p>Temperature: <span id="temperature"></span>°C</p>
+                                                                    </div>
+                                                                    <!--temp-->
+
+                                                                    <!--rain-->
+                                                                    <div class="raincontainer">
+                                                                        <input type="range" min="0" max="200" value="50" class="rain" id="Rain">
+                                                                        <p>Rainfall: <span id="rainfall"></span> in</p>
+                                                                    </div>
+                                                                    <!--rain-->
+                                                                    
+                                                                    <!--pesticide-->
+                                                                    <div class="pestcontainer">
+                                                                        <input type="range" min="1" max="100" value="50" class="pest" id="Pest">
+                                                                        <p>Pesticide use: <span id="pesticide"></span> "unit"</p>
+                                                                    </div>
+                                                                    <!--pesticide-->                                                                    
+                                                                    
+                                                                </div>
+
+                            <!--**********************************************SLIDERS**********************************************-->     
+ 
+                            <!--**********************************************CROPS**********************************************-->                                                                
+                                                                <h4 class="app-card-title">Crop Selection</h4>
+
+                                                                <div class="app-card-body p-3 p-lg-4">
+                                                                    
+                                                                    <!--dropdown-->
+                                                                    <div class="crop-select">
+                                                                       <select multiple="multiple">
+                                                                           <option>Maize</option>
+                                                                           <option>Potatoes</option>
+                                                                           <option>Rice</option>
+                                                                           <option>Wheat</option>
+                                                                           <option>Sorghum</option>
+                                                                           <option>Soybean</option>
+                                                                           <option>Cassava</option>
+                                                                           <option>Sweet Potatoes</option>
+                                                                           <option>Yams</option>
+                                                                           <option>Plantains/Bananas</option>
+                                                                       </select> 
+                                                                    </div>
+
+                                                                    <!--image select-->                                                                    
+                                                                    
+                                                                </div>
+
+                            <!--**********************************************CROPS**********************************************-->                              
+                            
+                                                            <!-- </div>//col -->
+                                                        </div><!--//row-->
+                                                    </div><!--//app-card-header-->
+                                                </div><!--//app-card-->
+                                            </div><!--//col-->			        
+                                        </div><!--//row-->
+                                        <!-- Line Chart Section -->
+                        
+                                        
+                                    </div><!--//container-fluid-->
+                                </div><!--//app-content-->
 
     <!-- Javascript -->          
     <script src="../assets/plugins/popper.min.js"></script>
@@ -162,10 +277,11 @@
 
     <!-- Charts JS -->
     <script src="../assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="../assets/js/index-charts.js"></script> 
+    
     
     <!-- Page Specific JS -->
-    <script src="../assets/js/app.js"></script> 
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/slider.js"></script>  
 
 </body>
 </html> 
