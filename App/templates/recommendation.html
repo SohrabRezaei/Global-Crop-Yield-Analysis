@@ -16,6 +16,23 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/leaflet.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script> 
+
+    <!-- API key -->
+    <script type="text/javascript" src="../assets/js/config.js"></script>
 
 </head> 
 
@@ -155,19 +172,105 @@
 
 
                             <!--**********************************************MAIN CODE GOES HERE**********************************************-->
+    <div class="app-wrapper">
+	    <!-- Pop up Introduction -->
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+			    
+			    <h1 class="app-page-title">Crop Recommendation</h1>
+			    
+			    <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
+				    <div class="inner">
+					    <div class="app-card-body p-3 p-lg-4">
+						    <h3 class="mb-3">Top Three Crops</h3>
+						    <div class="row gx-5 gy-3">
+						        <div class="col-12">							        
+							        <div>You can check out what the top three recommended crops in your area are! Hover over your desired location and we got you from there! You can also see the suggested crops yeild (number of years to be added here!) in the chart section</div>
+							    </div><!--//col-->
+						    </div><!--//row-->
+						    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					    </div><!--//app-card-body-->
+					    
+				    </div><!--//inner-->
+			    </div><!--//app-card-->
+				                                                                <!-- Map Section -->
+			    <div class="row g-4 mb-4">
+			        <div class="col-8">
+				        <div class="app-card app-card-chart h-100 shadow-sm">
+					        <div class="app-card-header p-3">
+						        <div class="row justify-content-between align-items-center">
+							        <div class="col-auto">
+						                <h4 class="app-card-title">World Map</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+					        </div><!--//app-card-header-->
+                            <div id="recomMap"></div>
+                        </div><!--//app-card-->
+
+                    </div><!--//col-->
+
+			        <div class="col-6 col-md-4">
+				        <div class="app-card app-card-chart h-100 shadow-sm">
+					        <div class="app-card-header p-3">
+						        <div class="row justify-content-between align-items-center">
+							        <div class="col-auto">
+						                <h4 class="app-card-title">Three Recommended Crops</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+					        </div><!--//app-card-header-->
+					        <div class="app-card-body p-3 p-lg-4">
+                                <!-- Put the three recoms table here!!! -->
+						        <!-- <div class="chart-container">
+				                    <canvas id="canvas-barchart" ></canvas>
+						        </div> -->
+					        </div><!--//app-card-body-->
+				        </div><!--//app-card-->
+			        </div><!--//col-->			        
+			    </div><!--//row-->
+                <!-- Line Chart Section -->
+                <div class="row g-4 mb-4">
+			        <div class="col-12">
+				        <div class="app-card app-card-chart h-100 shadow-sm">
+					        <div class="app-card-header p-3">
+						        <div class="row justify-content-between align-items-center">
+							        <div class="col-auto">
+						                <h4 class="app-card-title">Recommended Crops Avg. Yield Chart</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+					        </div><!--//app-card-header-->
+					        <div class="app-card-body p-3 p-lg-4">
+							    <div class="mb-3 d-flex">   
+							        <!-- <select class="form-select form-select-sm ms-auto d-inline-flex w-auto">
+									    <option value="1" selected>This week</option>
+									    <option value="2">Today</option>
+									    <option value="3">This Month</option>
+									    <option value="3">This Year</option>
+									</select> -->
+							    </div>
+                                <!-- World Map tag comes here -->
+						        <!-- <div class="chart-container">
+				                    <canvas id="canvas-linechart" ></canvas>
+						        </div> -->
+					        </div><!--//app-card-body-->
+				        </div><!--//app-card-->
+			        </div><!--//col-->        
+			    </div><!--//row-->
+
+			    
+		    </div><!--//container-fluid-->
+	    </div><!--//app-content-->
 
 
-
-        <!-- Javascript -->          
+    <!-- Javascript -->          
     <script src="../assets/plugins/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
     <!-- Charts JS -->
     <script src="../assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="../assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
-    <script src="../assets/js/app.js"></script> 
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/leaflet-topcrops.js"></script>  
 
 </body>
 </html> 
