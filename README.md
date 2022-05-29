@@ -5,7 +5,7 @@
 - **[Rabab Handa](https://github.com/RababHanda)**
 - **[Sohrab Rezaei](https://github.com/SohrabRezaei)**
 
-Deploy : [Our Deployment Link will be posted here soon!]
+Deploy : 🔜 Our Deployment Link will be posted here!
 
 ## Selected Topic 🌾🌽
 Agriculture is extremely important to the world economy. Understanding global agricultural output is critical for tackling food security concerns (hunger) as the human population continues to grow.
