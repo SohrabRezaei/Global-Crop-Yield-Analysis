@@ -25,8 +25,6 @@ Our project consists of three main sections:
 ## Description of the Source Data
 We found our datasets for this project on Kaggle: [Crop_Yield_Prediction_Dataset](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset?select=yield.csv)
 
-We will be using Amazon Web Services to store our data.
-
 *All dataset (publicly available dataset) on Kaggle are taken from [FAO (Food and Agriculture Organization)](http://www.fao.org/home/en/) and [World Data Bank](https://data.worldbank.org/).*
 
 ## Communication Protocols
