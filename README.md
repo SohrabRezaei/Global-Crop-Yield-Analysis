@@ -7,7 +7,7 @@
 
 Deploy : [Our Deployment Link will be posted here soon!]
 
-## Selected Topic
+## Selected Topic 🌾🌽
 Agriculture is extremely important to the world economy. Understanding global agricultural output is critical for tackling food security concerns (hunger) as the human population continues to grow.
 
 **Crop yield prediction** is a significant agricultural problem. Agricultural yield is largely influenced by meteorological conditions (rain, temperature, etc.) and pesticides, and reliable information about crop yield history is critical for making agricultural risk management and future predictions choices.
@@ -18,9 +18,9 @@ We picked top 20 most populated countries of the world to analyze this issue at 
 
 Our project consists of three main sections:
 
-- **Prediction**: We trained our ML model on previous data to predict future total yield of selected crops to help current and new farmers/business owners make an informed decision based on their existing area conditions (rain, temperature, pesticides).
-- **Analysis**: In this section, we want to give the users visual representation of different weather phenomena that would affect their crop yield.
-- **Recommendations**: We are trying to advise farmers top three crops to grow in their respective countries (based on each countries' average temperature, rainfall and used pesticide) to maximize total crop yield.  
+- **Prediction** 👩‍🌾👨🏿‍🌾📈: We trained our ML model on previous data to predict future total yield of selected crops to help current and new farmers/business owners make an informed decision based on their existing area conditions (rain, temperature, pesticides).
+- **Analysis** 🌦️: In this section, we want to give the users visual representation of different weather phenomena that would affect their crop yield.
+- **Recommendations** 🌱: We are trying to advise farmers top three crops to grow in their respective countries (based on each countries' average temperature, rainfall and used pesticide) to maximize total crop yield.  
 
 ## Description of the Source Data
 We found our datasets for this project on Kaggle: [Crop_Yield_Prediction_Dataset](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset?select=yield.csv)
@@ -32,7 +32,7 @@ We will be using Amazon Web Services to store our data.
 ## Communication Protocols
 We meet once a week in person and go over details fo the project for upcoming weeks. We also communicate regularly via Whatsapp, Slack and do regular Zoom sessions to keep each other informed about the status of our respective aspects of the project. 
 
-Here is a picture of us refueling:
+Here is a picture of us refueling 😋:
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Team_pics/House_on_parlimant.jpeg"
   width="400" 
