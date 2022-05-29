@@ -1,26 +1,26 @@
 //Temperature
-var slider = document.getElementById("Temp");
-var output = document.getElementById("temperature");
-output.innerHTML = slider.value;
+var tempSlider = document.getElementById("Temp");
+var tempOutput = document.getElementById("temperature");
+tempOutput.innerHTML = tempSlider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
+tempSlider.oninput = function() {
+  tempOutput.innerHTML = this.value;
 }
 
 // Rainfall
-var slider = document.getElementById("Rain");
-var output = document.getElementById("rainfall");
-output.innerHTML = slider.value;
+var rainSlider = document.getElementById("Rain");
+var rainOutput = document.getElementById("rainfall");
+rainOutput.innerHTML = rainSlider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
+rainSlider.oninput = function() {
+  rainOutput.innerHTML = this.value;
 }
 
 //Pesticide
-var slider = document.getElementById("Pest");
-var output = document.getElementById("pesticide");
-output.innerHTML = slider.value;
+var pestSlider = document.getElementById("Pest");
+var pestOutput = document.getElementById("pesticide");
+pestOutput.innerHTML = pestSlider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
+pestSlider.oninput = function() {
+  pestOutput.innerHTML = this.value;
 }
