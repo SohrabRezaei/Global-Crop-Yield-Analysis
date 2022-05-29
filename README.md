@@ -37,7 +37,7 @@ Here is a picture of us refueling 😋:
   height=auto class="rounded">
 </p>
 
-And pictures of us collaborating *(Don't Judge! It was the Champions League Final ⚽⚽)*: 
+And picture of us collaborating *(Don't Judge! It was the Champions League Final ⚽⚽)*: 
 <p align="center">
   <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Team_pics/Home-1.jpeg"
   width="400" 
