@@ -92,7 +92,15 @@ You can find the initial plan of our website here:
 </p>
 
 ## Machine Learning
--- ML explanation will come here!
+Since we are predicting crop yield, we will be using different types of regression models and will choose the best possible model amongst tghem. So we start by making a correlation matrix. This is done to figure out if there are any two independent variables highly correlated with each other. If any two variables were highly correlated, it would be hard to interpret the results of regression and we would have to eliminate one of the variables. In our first train test split, we set aside the test data. This test data will be used at the very end when we know for sure which model we will use. Then we divide our independent variables into categorical and numerical data, perform One hot encoding on categorical variables and standardize our numerical data. 
+
+The reamining training data will be further split into training and validation data. On validation data, we will tune our hyperparamters for all models and see which model gives us the best results. We apply six different models: LinearRegression(), RandomForestRegressor(), GradientBoostingRegressor(), MLPRegressor(), DecisionTreeRegressor() and LassoRegression. 
+
+After using multiple models and adjusting their parameters, we found out that RandomForestRegressor() gave the best result. Now we are going to apply the Grid Search tenchnique in order to find the best possible parameters for our model. We are going to fit this to our training data which we set aside at the very beginning. From the grid search technique, we find out that in the RandomForestRegressor model, max_depth =10 and n_estimators=300 will give us the best possible model. It did not return other parameters which we passed in our param_grid dictionary as those parameters will not significantly affect our result.
+
+Finally, we our going to incorporate the test data we set aside at the very start. Test data will also be one hot encoded and standardized just like we did with the training data.The r2 score which we get from using y_test and test_prediction iis very similar to the score we got previously.
+
+We can conclude by saying that the model we ended up choosing does a pretty decent job in predicting the crop yield. 
 
 
 ## Database & EDA
