@@ -17,6 +17,17 @@ import numpy as np
 # Flask Setup
 app = Flask(__name__)
 
+#######################################################################
+# Database Setup
+#######################################################################
+
+engine = create_engine("", echo=False)
+
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+
+# Create classes HERE!!!!!!
+
 # **************************HomePage Route****************************
 @app.route("/")
 def home():
