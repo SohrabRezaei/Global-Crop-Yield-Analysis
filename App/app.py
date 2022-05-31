@@ -14,14 +14,16 @@ from dateutil.relativedelta import relativedelta
 import datetime
 import numpy as np
 
+#######################################################################
 # Flask Setup
+#######################################################################
 app = Flask(__name__)
 
 #######################################################################
 # Database Setup
 #######################################################################
 
-engine = create_engine("", echo=False)
+engine = create_engine("postgresql://project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
 Base = automap_base()
 Base.prepare(engine, reflect=True)
