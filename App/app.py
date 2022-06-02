@@ -1,17 +1,9 @@
 # Import Dependencies
 import os
 from flask import (Flask, render_template, jsonify, request, redirect)
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
-from sqlalchemy import func
 # import psycopPPg2
 import pandas as pd
 import pickle
-# from flask_sqlalchemy import SQLAlchemy
-from dateutil.relativedelta import relativedelta
-import datetime
 import numpy as np
 
 # Flask Setup
@@ -20,13 +12,9 @@ app = Flask(__name__)
 #######################################################################
 # Database Setup
 #######################################################################
+# use PySpark to connect to DB please!
 
-engine = create_engine("", echo=False)
 
-Base = automap_base()
-Base.prepare(engine, reflect=True)
-
-# Create classes HERE!!!!!!
 
 # **************************HomePage Route****************************
 @app.route("/")
@@ -34,7 +22,7 @@ def home():
     return render_template("index.html")
 
 # **************************Yield Prediction****************************
-@app.route("/prediction")
+@app.route("/api/prediction")
 def yield_prediction():
     return render_template("prediction.html")
 
@@ -44,7 +32,7 @@ def weather_analysis():
     return render_template("wanalysis.html")
 
 # **************************Crop Recommendation****************************
-@app.route("/crop_recommendation")
+@app.route("/api/crop_recommendation")
 def crop_recommendation():
     return render_template("recommendation.html")
 # **************************Our Team****************************
