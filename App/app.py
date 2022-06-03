@@ -1,20 +1,33 @@
+#################################################
 # Import Dependencies
+#################################################
 import os
 from flask import (Flask, render_template, jsonify, request, redirect)
-# import psycopPPg2
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from sqlalchemy import func
+import psycopg2
 import pandas as pd
 import pickle
 import numpy as np
+#################################################
+engine = create_engine("postgresql://sohrabrezaei:Lightgreen123-_-@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
-# Flask Setup
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+session = Session(engine)
+
+Base.classes.keys()
+
+# # Flask Setup
 app = Flask(__name__)
 
 #######################################################################
 # Database Setup
 #######################################################################
-# use PySpark to connect to DB please!
-
-
 
 # **************************HomePage Route****************************
 @app.route("/")
@@ -35,6 +48,7 @@ def weather_analysis():
 @app.route("/api/crop_recommendation")
 def crop_recommendation():
     return render_template("recommendation.html")
+
 # **************************Our Team****************************
 @app.route("/our_team")
 def our_team():
