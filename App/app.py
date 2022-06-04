@@ -14,11 +14,49 @@ app = Flask(__name__)
 #######################################################################
 # use PySpark to connect to DB please!
 
+import os
+# Find the latest version of spark 3.0 from http://www.apache.org/dist/spark/ and enter as the spark version
+# For example:
+# spark_version = 'spark-3.0.3'
+spark_version = 'spark-3.2.1'
+os.environ['SPARK_VERSION']=spark_version
+
+
+
+# Set Environment Variables
+import os
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
+os.environ["SPARK_HOME"] = f"/content/{spark_version}-bin-hadoop2.7"
+
+# Start a SparkSession
+import findspark
+findspark.init()
+
+
+# Read in data from S3 Buckets
+url ='https://globalcropyieldanalysis.s3.amazonaws.com/join.csv'
+spark.sparkContext.addFile(url)
+join_df = spark.read.csv(SparkFiles.get("join.csv"), sep=",", header=True, inferSchema=True)
+
+# Store environmental variable
+from getpass import getpass
+password = getpass('password')
+# Configure settings for RDS
+mode = "overwrite"
+jdbc_url="jdbc:postgresql://project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis"
+config = {"user":"sohrabrezaei",
+          "password": password,
+          "driver":"org.postgresql.Driver"}
+
+# Write DataFrame to undernourished table in RDS
+join_df.write.jdbc(url=jdbc_url, table='Joined', mode=mode, properties=config)
+
 
 
 # **************************HomePage Route****************************
 @app.route("/")
 def home():
+    console.log(join_df)
     return render_template("index.html")
 
 # **************************Yield Prediction****************************

@@ -346,9 +346,9 @@ var lineChartConfig = {
 
 
 
-// Chart.js Bar Chart Example 
+// Chart.js Line Chart Example 
 
-var barChartConfig = {
+var lineChartConfig1 = {
 	type: 'line',
 
 	data: {
@@ -471,8 +471,8 @@ window.addEventListener('load', function(){
 	var lineChart = document.getElementById('canvas-linechart').getContext('2d');
 	window.myLine = new Chart(lineChart, lineChartConfig);
 	
-	var barChart = document.getElementById('canvas-barchart').getContext('2d');
-	window.myBar = new Chart(barChart, barChartConfig);
+	var lineChart1 = document.getElementById('canvas-linechart1').getContext('2d');
+	window.myLine = new Chart(lineChart1, lineChartConfig1);
 	
 
 });	
