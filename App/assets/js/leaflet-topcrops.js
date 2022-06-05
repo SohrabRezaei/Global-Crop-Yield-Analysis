@@ -1,3 +1,5 @@
+// Data source
+
 
 var myIcon = L.icon({
     iconUrl: 'https://www.svgrepo.com/show/206227/corn.svg',
@@ -65,34 +67,54 @@ let map = L.map('recomMap', {
 
 L.control.layers(baseMaps).addTo(map);
 
-// var information;
-// d3.json("flask app").then(infoData=>{
-//     information=infoData;
-// })
+// ############# Recommendation section ###########//
+
+
 const cropBox = d3.select("#cropbox");
 const threeRecoms = d3.select('#threeRecoms');
+var tbody = d3.select("tbody");
 
 const showCountry=(countryName)=>{
     cropBox.html(countryName)
-    threeRecoms.html(`<table>
-    <tr>
-    <th>Crops</th>
-    <th>Yield</th>
-    </tr>
-    <tr>
-    <td>Potato</td>
-    <td>5</td>
-    </tr>
-    <tr>
-    <td>Maize</td>
-    <td>6</td>
-    </tr>
-    </table>`)
+    tbody.html(
+    `//    <tr>
+    //     <td>Potato</td>
+    //     <td>5</td>
+    //     </tr>
+    //     <tr>
+    //     <td>Maize</td>
+    //     <td>6</td>
+    //     </tr>`
+    );
 };
-
 
 topCountries.forEach(function(country) {
     L.marker(country.geometry.coordinates,{icon:myIcon}).addTo(map).on('click',()=>showCountry(country.properties.country));
 });
 
 
+// `<table>
+//     <tr>
+//     <th>Crops</th>
+//     <th>Yield</th>
+//     </tr>
+//     <tr>
+//     <td>Potato</td>
+//     <td>5</td>
+//     </tr>
+//     <tr>
+//     <td>Maize</td>
+//     <td>6</td>
+//     </tr>
+//     </table>`
+
+// function buildTable(cropRecom) {
+//     tbody.html("");
+//     cropRecom.forEach((crop) => {
+//       let row = tbody.append("tr");      
+//       Object.values(crop).forEach((crop) => {
+//         let cell = row.append("td");
+//         cell.text(crop);
+//       });
+//     });
+//   }
