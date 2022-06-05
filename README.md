@@ -11,13 +11,13 @@
 
 # Table of Content
 1. [Project Overview](#Project-Overview)
-2. [Why this topic?](#Why-this-topic?)
+2. [Why this topic?](#why-this-topic?)
 2. [Source Data](#Source-Data)
 4. [Sections](#Sections)
-    - [Meteorological Analysis](##Meteorological-Analysis)
-    - [Yield Prediction](##Yield-Prediction)
-    - [Crop Recommendation](##Crop-Recommendation)
-5. [Tools and Technologies](##Tools-and-Technologies)
+    - [Meteorological Analysis](#meteorological-analysis)
+    - [Yield Prediction](#yield-prediction)
+    - [Crop Recommendation](#crop-recommendation)
+5. [Tools and Technologies](#tools-and-technologies)
 6. [Dashboard](#Dashboard)
 
 # Project Overview🌾🌽
