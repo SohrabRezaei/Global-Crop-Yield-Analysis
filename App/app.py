@@ -66,7 +66,7 @@ def yield_prediction(rainfall,pest,temp,crop, country):
     # "Average Rainfall (mm/year)", "Pesticides (Tonnes)", "Average Temperature"
     # Scale  .transform(<temp>/<rainfall>/<pest>)
     # OnHotcode =>one table
-        # pd.df(columns name based on our ML to create a table)
+        # pd.df(columns name based on our ML to create a table
         # then use if statements for each of em
     # rf.predict(final table)
 
