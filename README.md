@@ -14,10 +14,10 @@
 2. [Why this topic?](#Why-this-topic?)
 2. [Source Data](#Source-Data)
 4. [Sections](#Sections)
-    - [Meteorological Analysis](#Meteorological-Analysis)
-    - [Yield Prediction](#Yield-Prediction)
-    - [Crop Recommendation](#Crop-Recommendation)
-5. [Tools and Technologies](#Tools-and-Technologies)
+    - [Meteorological Analysis](##Meteorological-Analysis)
+    - [Yield Prediction](##Yield-Prediction)
+    - [Crop Recommendation](##Crop-Recommendation)
+5. [Tools and Technologies](##Tools-and-Technologies)
 6. [Dashboard](#Dashboard)
 
 # Project Overview🌾🌽
