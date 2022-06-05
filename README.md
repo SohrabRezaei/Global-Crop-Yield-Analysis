@@ -10,15 +10,14 @@
 **Checkout the presentation here**: [Global Crop Yield Analysis Presentation](https://docs.google.com/presentation/d/1IRI6LFxQkQMSdlPyFniTKJjYMbloIk532eeUkKgtX3I/edit?usp=sharing)
 
 # Table of Content
-1. [Project Overview](##Project-Overview)
-2. [Why this topic?](##Why-this-topic?)
-2. [Source Data](##Source-Data)
-3. [Objective](##Objectives)
+1. [Project Overview](##Project%Overview)
+2. [Why this topic?](##Why%this%topic?)
+2. [Source Data](##Source%Data)
 4. [Sections](#Sections)
-    - [Meteorological Analysis](##Meteorological-Analysis)
-    - [Yield Prediction](##Yield-Prediction)
-    - [Crop Recommendation](##Crop-Recommendation)
-5. [Tools and Technologies](#Tools-and-Technologies)
+    - [Meteorological Analysis](##Meteorological%Analysis)
+    - [Yield Prediction](##Yield%Prediction)
+    - [Crop Recommendation](##Crop%Recommendation)
+5. [Tools and Technologies](#Tools%and%Technologies)
 6. [Dashboard](#Dashboard)
 
 # Project Overview🌾🌽
