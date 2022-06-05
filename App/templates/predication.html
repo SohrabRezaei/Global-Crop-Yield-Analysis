@@ -181,7 +181,7 @@
                                                 
                                             </div><!--//inner-->
                                         </div><!--//app-card-->
-                                                                                                        <!-- Chart Section -->
+                                                                                                        <!-- Map Section -->
                                         <div class="row g-4 mb-4">
                                             <div class="col-8">
                                                 <div class="app-card app-card-chart h-100 shadow-sm">
@@ -209,22 +209,22 @@
                                                                     
                                                                     <!--temp-->
                                                                     <div class="tempcontainer">
-                                                                        <input type="range" min="1" max="100" value="50" class="temp" id="Temp">
+                                                                        <input type="range" min="-20" max="60" value="25" class="temp" id="Temp">
                                                                         <p>Temperature: <span id="temperature"></span>°C</p>
                                                                     </div>
                                                                     <!--temp-->
 
                                                                     <!--rain-->
                                                                     <div class="raincontainer">
-                                                                        <input type="range" min="0" max="200" value="50" class="rain" id="Rain">
-                                                                        <p>Rainfall: <span id="rainfall"></span> in</p>
+                                                                        <input type="range" min="50" max="3300" value="50" class="rain" id="Rain">
+                                                                        <p>Rainfall: <span id="rainfall"></span> mm</p>
                                                                     </div>
                                                                     <!--rain-->
                                                                     
                                                                     <!--pesticide-->
                                                                     <div class="pestcontainer">
-                                                                        <input type="range" min="1" max="100" value="50" class="pest" id="Pest">
-                                                                        <p>Pesticide use: <span id="pesticide"></span> "unit"</p>
+                                                                        <input type="range" min="0" max="440000" value="10000" class="pest" id="Pest">
+                                                                        <p>Pesticide use: <span id="pesticide"></span> tonnes</p>
                                                                     </div>
                                                                     <!--pesticide-->                                                                    
                                                                     
@@ -233,28 +233,81 @@
                             <!--**********************************************SLIDERS**********************************************-->     
  
                             <!--**********************************************CROPS**********************************************-->                                                                
-                                                                <h4 class="app-card-title">Crop Selection</h4>
+                                                                <h4 class="app-card-title">Crop</h4>
 
                                                                 <div class="app-card-body p-3 p-lg-4">
                                                                     
                                                                     <!--dropdown-->
                                                                     <div class="crop-select">
-                                                                       <select multiple="multiple">
-                                                                           <option>Maize</option>
-                                                                           <option>Potatoes</option>
-                                                                           <option>Rice</option>
-                                                                           <option>Wheat</option>
-                                                                           <option>Sorghum</option>
-                                                                           <option>Soybean</option>
-                                                                           <option>Cassava</option>
-                                                                           <option>Sweet Potatoes</option>
-                                                                           <option>Yams</option>
-                                                                           <option>Plantains/Bananas</option>
+                                                                       <select>
+                                                                           <option value="0">Cassava</option>
+                                                                           <option value="1">Maize</option>
+                                                                           <option value="2">Plantains/Bananas</option>
+                                                                           <option value="3">Potatoes</option>
+                                                                           <option value="4">Rice/Paddy</option>                                                                           
+                                                                           <option value="5">Sorghum</option>
+                                                                           <option value="6">Soybeans</option>
+                                                                           <option value="7">Sweet Potatoes</option>
+                                                                           <option value="8">Wheat</option>
+                                                                           <option value="9">Yams</option>
                                                                        </select> 
                                                                     </div>
 
                                                                     <!--image select-->                                                                    
                                                                     
+                                                                </div>
+                            <!--**********************************************CROPS**********************************************--> 
+
+                            <!--**********************************************COUNTRIES**********************************************--> 
+                                                                <h4 class="app-card-title">Country</h4>
+
+                                                                <div class="app-card-body p-3 p-lg-4">
+                                                                    
+                                                                    <!--dropdown-->
+                                                                    <div class="country-select">
+                                                                       <select>
+                                                                           <option value="11">Bangladesh</option>
+                                                                           <option value="0">Bolivia</option>
+                                                                           <option value="1">Brazil</option>
+                                                                           <option value="2">Burundi</option>
+                                                                           <option value="3">Camerooon</option>
+                                                                           <option value="11">China</option>
+                                                                           <option value="4">Colombia</option>
+                                                                           <option value="5">Democratic Republic of Congo</option>
+                                                                           <option value="6">Ecuador</option>
+                                                                           <option value="11">Egypt</option>
+                                                                           <option value="11">France</option>
+                                                                           <option value="11">Germany</option>
+                                                                           <option value="7">Guatemala</option>
+                                                                           <option value="8">Honduras</option>
+                                                                           <option value="11">India</option>
+                                                                           <option value="11">Indonesia</option>
+                                                                           <option value="11">Iran</option>
+                                                                           <option value="11">Italy</option>
+                                                                           <option value="11">Japan</option>
+                                                                           <option value="9">Kenya</option>
+                                                                           <option value="11">Pakistan</option>
+                                                                           <option value="12">Peru</option>
+                                                                           <option value="10">Mali</option>
+                                                                           <option value="11">Mexico</option>
+                                                                           <option value="11">Russia</option>
+                                                                           <option value="13">Rwanda</option>
+                                                                           <option value="11">Thailand</option>
+                                                                           <option value="11">Turkey</option>
+                                                                           <option value="15">Uganda</option>
+                                                                           <option value="11">UK</option>
+                                                                           <option value="11">USA</option>
+                                                                           <option value="16">Venezuela</option>
+                                                                           <option value="11">Vietnam</option>
+                                                                       </select> 
+                                                                    </div>
+
+                                                                    <!--image select-->                                                                    
+                                                                    
+                                                                </div>
+                            <!--**********************************************COUNTRTIES**********************************************--> 
+                                                                <div>
+                                                                    <p align="right"><a id="predictButton" class="btn btn-success btn-lg" role="button">Submit</a></p>
                                                                 </div>
 
                             <!--**********************************************CROPS**********************************************-->                              
@@ -281,7 +334,7 @@
     
     <!-- Page Specific JS -->
     <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/slider.js"></script>  
+    <script src="../assets/js/prediction.js"></script>  
 
 </body>
 </html> 
