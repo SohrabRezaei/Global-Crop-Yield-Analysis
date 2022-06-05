@@ -84,7 +84,7 @@ L.OWM = L.TileLayer.extend({
 	L.OWM.rainClassic = function (options) {
 		var layer = new L.OWM.RainClassic(options);
 		if (layer.options.legendImagePath == null) {
-			layer.options.legendImagePath = '/Users/rabab/Desktop/Challenges/Global-Crop-Yield-Analysis/App/assets/images/rain_legend.png';
+			layer.options.legendImagePath = '..assets/images/rain_legend.png';
 		}
 		return layer;
 	};
@@ -95,7 +95,7 @@ L.OWM = L.TileLayer.extend({
 	L.OWM.temperature = function (options) {
 		var layer = new L.OWM.Temperature(options);
 		if (layer.options.legendImagePath == null) {
-			layer.options.legendImagePath = '/Users/rabab/Desktop/Challenges/Global-Crop-Yield-Analysis/App/assets/images/temp_legend.png';
+			layer.options.legendImagePath = '..assets/images/temp_legend.png';
 		}
 		return layer;
 	};
