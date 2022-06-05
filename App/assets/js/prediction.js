@@ -1,4 +1,4 @@
-///////////SLIDERS///////////
+
 
 //Temperature
 var tempSlider = document.getElementById("Temp");
@@ -26,10 +26,6 @@ pestOutput.innerHTML = pestSlider.value;
 pestSlider.oninput = function() {
   pestOutput.innerHTML = this.value;
 }
-////////////////////////////////
-
-
-///////////Prediction///////////
 
 d3.select(predictButton).on("click",handleSubmit);
 function handleSubmit() {
@@ -43,4 +39,3 @@ function handleSubmit() {
         d3.select("#predictionDisplay").html(resp.predicted);
     })
 };
-////////////////////////////////
