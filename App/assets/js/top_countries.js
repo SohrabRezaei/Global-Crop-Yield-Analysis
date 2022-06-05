@@ -1,3 +1,5 @@
+const url ='/api/crop_recommendation';
+
 // Showing top 20 countries
 var topCountries = [{
     "type": "Feature",
@@ -52,7 +54,7 @@ var topCountries = [{
         [23.81,90.41]}  
     },{
     "type": "Feature",
-    "properties": {"country": "Congo"},
+    "properties": {"country": "Democratic Republic of the Congo"},
     "geometry": {
         "type": "Point",
         "coordinates":
@@ -143,3 +145,8 @@ var topCountries = [{
         [-6.2,106.84]}          
     }
 ];
+
+var cropRecom;
+d3.json(url).then(cropData=>{
+    cropRecom=cropData;
+});
