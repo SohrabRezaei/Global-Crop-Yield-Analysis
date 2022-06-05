@@ -6,7 +6,8 @@
 - **[Sohrab Rezaei](https://github.com/SohrabRezaei)**
 
 Deploy : 🔜 Our Deployment Link will be posted here!
-[Global_Yield_Crop_Analysis](https://docs.google.com/presentation/d/1IRI6LFxQkQMSdlPyFniTKJjYMbloIk532eeUkKgtX3I/edit?usp=sharing)
+
+Checkout the presentation here: [Global_Yield_Crop_Analysis](https://docs.google.com/presentation/d/1IRI6LFxQkQMSdlPyFniTKJjYMbloIk532eeUkKgtX3I/edit?usp=sharing)
 
 ## Selected Topic 🌾🌽
 Agriculture is extremely important to the world economy. Understanding global agricultural output is critical for tackling food security concerns (hunger) as the human population continues to grow.
