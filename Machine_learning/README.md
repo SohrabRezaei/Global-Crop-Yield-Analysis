@@ -5,6 +5,9 @@ The reamining training data will be further split into training and validation d
 
 After using multiple models and adjusting their parameters, we found out that RandomForestRegressor() gave the best result. Now we are going to apply the Grid Search tenchnique in order to find the best possible parameters for our model. We are going to fit this to our training data which we set aside at the very beginning. From the grid search technique, we find out that in the RandomForestRegressor model, max_depth =10 and n_estimators=300 will give us the best possible model. It did not return other parameters which we passed in our param_grid dictionary as those parameters will not significantly affect our result.
 
-Finally, we our going to incorporate the test data we set aside at the very start. Test data will also be one hot encoded and standardized just like we did with the training data.The r2 score which we get from using y_test and test_prediction iis very similar to the score we got previously.
+Finally, we our going to incorporate the test data we set aside at the very start. Test data will also be one hot encoded and standardized just like we did with the training data.The r2 score which we get from using y_test and test_prediction is very similar to the score we got previously. We can conclude by saying that the model we ended up choosing does a pretty decent job in predicting the crop yield. 
 
-We can conclude by saying that the model we ended up choosing does a pretty decent job in predicting the crop yield. 
+Once the final model is decided, we create a pipeline of the model. Creating a pipeline is necessary for us since we are taking user input and we would like all the pre processing steps (like one hot encoding and standardizing data) to be applied to the inputted data as well. After creating a pipeline of the model, the pipeline is dumped into a pickle file. This pickle file is later loaded into the app.py file. When the users input their values into the dashboard, their values will be pre processed just like the training data and then they will see a predicted value of the crop yield.  
+
+
+
