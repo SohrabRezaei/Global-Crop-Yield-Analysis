@@ -77,19 +77,10 @@ const threeRecoms = d3.select('#threeRecoms');
 var tbody = d3.select("tbody");
 
 const showCountry=(countryName)=>{
-    // console.log(cropRecom[countryName])
+    console.log(cropRecom[countryName])
     cropBox.html(countryName)
-    tbody.html(buildTable(cropRecom, countryName)
-        // `
-        // <table>
-        //     <tr>
-        //         <th>Crop</th>
-        //         <th>Yeild</th>
-        //     </tr>
-            // ${buildTable(cropRecom, countryName)}
-        // </table>
-        // `
-    );
+    buildTable(cropRecom, countryName)
+    ;
 };
 
 topCountries.forEach(function(country) {
@@ -98,39 +89,11 @@ topCountries.forEach(function(country) {
 
 function buildTable(countryCropYeild, countryName) {
     tbody.html("");
-    const data = countryCropYeild[countryName]; // Only Crop : Yeild data object 
-    console.log(countryCropYeild[countryName]);
-    console.log(data);
-    data.forEach((crop) => {
+    const data = countryCropYeild[countryName]; 
+    Object.entries(data).forEach((crop) => {
         let row = tbody.append("tr");
-        Object.values(crop).forEach((val) => {
-          let cell = row.append("td");
-          cell.text(val);
+            row.text(crop[0]);
+        let cell = row.append("td");
+            cell.text(crop[1]);
         });
-      });
-    }
-  
-    // // Not using below code
-    // // tbody.html("");
-    // cropRecom.forEach((crop) => {
-    //   let row = tbody.append("tr");      
-    //   Object.values(crop).forEach((crop) => {
-    //     let cell = row.append("td");
-    //     cell.text(crop);
-    // //   });
-    // // });
-    
-// `<table>
-//     <tr>
-//     <th>Crops</th>
-//     <th>Yield</th>
-//     </tr>
-//     <tr>
-//     <td>Potato</td>
-//     <td>5</td>
-//     </tr>
-//     <tr>
-//     <td>Maize</td>
-//     <td>6</td>
-//     </tr>
-//     </table>`
+    };
