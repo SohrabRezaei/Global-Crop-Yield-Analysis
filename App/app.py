@@ -57,27 +57,10 @@ def yield_page():
     return render_template("prediction.html")
 
 @app.route("/api/predict/<country>/<crop>/<rainfall>/<pest>/<temp>/")
-def yield_prediction(rainfall,pest,temp,crop, country):
-    to_scale = pd.DataFrame({"Average Rainfall (mm/year)":[float(rainfall)],"Pesticides (Tonnes)":[float(pest)],"Average Temperature":[float(temp)]})
-    scale = model.transform(to_scale)
-    crop_index = int(crop)
-    country_index = int(country)
-    encoded_arr = np.zeros(27)
-    encoded_arr[crop_index] = 1
-    encoded_arr[country_index] = 1
-    pred_arr = np.hstack((scale, encoded_arr))
-    pred_y = model.predict(pred_arr)
-    return { "predicted": pred_y}
-
-    """
-    'x0_Bolivia', 'x0_Brazil', 'x0_Burundi', 'x0_Cameroon',
-       'x0_Colombia', 'x0_Democratic Republic of the Congo', 'x0_Ecuador',
-       'x0_Guatemala', 'x0_Honduras', 'x0_Kenya', 'x0_Mali', 'x0_Other',
-       'x0_Peru', 'x0_Rwanda', 'x0_Tanzania', 'x0_Uganda', 'x0_Venezuela',
-       'x1_Cassava', 'x1_Maize', 'x1_Plantains and others', 'x1_Potatoes',
-       'x1_Rice, paddy', 'x1_Sorghum', 'x1_Soybeans', 'x1_Sweet potatoes',
-       'x1_Wheat', 'x1_Yams'
-    """
+def yield_prediction(country, crop, rainfall, pest,temp ):
+    user_input = pd.DataFrame(np.array([[country, crop, rainfall, pest,temp]]),columns=['Country','Item','Average Rainfall (mm/year)','Pesticides (Tonnes)','Average Temperature'])
+    pred_y = model.predict(user_input)
+    return {"predicted":round(float(pred_y),2)}
 
 
 # **************************Weather Analysis****************************
@@ -89,7 +72,7 @@ def weather_analysis():
 @app.route("/crop_recommendation")
 def crop_page():
     return render_template("recommendation.html")
-
+#  Recom table
 @app.route("/api/crops")
 def crop_recommendation():
     query = """
@@ -113,6 +96,11 @@ def crop_recommendation():
         curr_country_table = df.loc[df.Country == country]
         country_json[country] = { row["Item"]:row["Avg_Yield"] for idx, row in df.loc[df.Country == country][:3].iterrows()}
     return(country_json)
+
+
+@app.route("/api/cropchart")
+def crop_chart():
+    return()
 
 # **************************Our Team****************************
 @app.route("/our_team")

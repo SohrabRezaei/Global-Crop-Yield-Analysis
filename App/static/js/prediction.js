@@ -25,17 +25,17 @@ pestOutput.innerHTML = pestSlider.value;
 
 pestSlider.oninput = function() {
   pestOutput.innerHTML = this.value;
-}
+};
 
 d3.select(predictButton).on("click",handleSubmit);
+
 function handleSubmit() {
-    let cropInput = d3.select("#cropinput").property("value");
-    let countryInput = d3.select("#countryinput").property("value");
+    let cropInput = d3.select("#cropinput").select("select").property("value");
+    let countryInput = d3.select("#countryinput").select("select").property("value");
     let rainfallInput = d3.select("#Rain").property("value");
     let tempInput = d3.select("#Temp").property("value");
     let pestInput = d3.select("#Pest").property("value");
-    d3.json(`/api/predict/${countryInput}/${cropInput}/${rainfallInput}/${pestInput}/${tempInput}//`).then(resp => {
-        return { "predicted": pred_y};
+    d3.json(`/api/predict/${countryInput}/${cropInput}/${rainfallInput}/${pestInput}/${tempInput}/`).then(resp => {
         d3.select("#predictionDisplay").html(resp.predicted);
-    })
+    });
 };
