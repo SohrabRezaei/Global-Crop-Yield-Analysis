@@ -1,0 +1,17 @@
+html,
+body,
+/* Formatting for Crop Recommendation map */
+#recomMap {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Formatting for Meteorological Analysis map */
+#weatherMap {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+}
