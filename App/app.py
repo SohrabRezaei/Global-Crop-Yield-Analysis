@@ -18,8 +18,9 @@ import pandas as pd
 import pickle
 import numpy as np
 #from config import password
-from Class.class_modifier import Country_modifier
+from myclass.class_modifier import Country_modifier
 #from dotenv import load_dotenv 
+
 
 
 
