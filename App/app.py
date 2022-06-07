@@ -4,7 +4,9 @@
 #from asyncio.windows_utils import pipe
 import os
 
+print(os.getcwd())
 os.chdir('App')
+print(os.getcwd())
 
 from flask import (Flask, render_template, jsonify, request, redirect,url_for)
 import sqlalchemy
