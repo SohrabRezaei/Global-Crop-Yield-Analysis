@@ -16,11 +16,13 @@ import pickle
 import numpy as np
 from config import password
 from class_modifier import Country_modifier
+from dotenv import load_dotenv 
 
 
 # Flask Setup
 app = Flask(__name__)
 
+load_dotenv()
 #################################################
 # Database Setup
 #######################################################################

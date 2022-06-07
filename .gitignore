@@ -8,6 +8,7 @@ __pycache__/
 
 config.js
 config.py
+.env
 # Distribution / packaging
 .Python
 build/
