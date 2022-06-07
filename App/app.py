@@ -14,9 +14,9 @@ import psycopg2
 import pandas as pd
 import pickle
 import numpy as np
-from config import password
+#from config import password
 from class_modifier import Country_modifier
-# from dotenv import load_dotenv 
+#from dotenv import load_dotenv 
 
 
 # Flask Setup
@@ -26,7 +26,7 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #######################################################################
-engine = create_engine(f"postgresql://sohrabrezaei:{password}@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
+engine = create_engine(f"postgresql://sohrabrezaei:{os.environ['password']}@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
 
 Base = automap_base()
