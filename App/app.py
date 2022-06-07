@@ -4,9 +4,7 @@
 #from asyncio.windows_utils import pipe
 import os
 
-print(os.getcwd())
 os.chdir('App')
-print(os.getcwd())
 
 from flask import (Flask, render_template, jsonify, request, redirect,url_for)
 import sqlalchemy
@@ -20,7 +18,7 @@ import pandas as pd
 import pickle
 import numpy as np
 #from config import password
-from class_modifier import Country_modifier
+from Class.class_modifier import Country_modifier
 #from dotenv import load_dotenv 
 
 
