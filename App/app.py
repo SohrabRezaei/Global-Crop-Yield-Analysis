@@ -26,7 +26,7 @@ load_dotenv()
 #################################################
 # Database Setup
 #######################################################################
-engine = create_engine(f"postgresql://sohrabrezaei:{password}@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
+engine = create_engine(f"postgresql://sohrabrezaei:Teamnerd123-_-@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
 
 Base = automap_base()
