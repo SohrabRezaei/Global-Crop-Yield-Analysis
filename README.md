@@ -47,7 +47,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Objectives**: To give the users visual representation of different weather phenomena that would affect their crop yield.
 - **Model**: GeoJSON data plotting
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Schematics/wanalysis.jpg"
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Schematics/wanalysis.jpg"
   width="600" 
   height=auto class="rounded">
 </p>
@@ -64,7 +64,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Objectives**: Using ML model on previous data to predict future total yield of selected crops to help current and new farmers/business owners make an informed decision based on their existing area conditions (rain, temperature, pesticides).
 - **Model**: Machine Learning (RandomForest Regressor)
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Schematics/ML.jpg"
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Schematics/ML.jpg"
   width="600" 
   height=auto class="rounded">
 </p>
@@ -80,7 +80,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Objectives**: Advising farmers top three crops to grow in their perspective country to maximize total crop yield.
 - **Model**: Getting highest yield crops of each country for year 2013 using pandas and sqlalchemy.
 <p align="center">
-  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Schematics/recommendation.jpg"
+  <img src="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis/blob/main/Resources/Visuals/Schematics/recommendation.jpg"
   width="600" 
   height=auto class="rounded">
 </p>
