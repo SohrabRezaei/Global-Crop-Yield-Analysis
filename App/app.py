@@ -39,7 +39,7 @@ Base.prepare(engine, reflect=True)
 session = Session(engine)
 
 # Machine Learning Model 
-with open(r"model_pickle.pkl", "rb") as input_file:
+with open(r"App/model_pickle.pkl", "rb") as input_file:
    model = pickle.load(input_file)
 
 
