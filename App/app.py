@@ -15,6 +15,7 @@ import pandas as pd
 import pickle
 import numpy as np
 #from config import password
+import App.class_modifier
 from .class_modifier import Country_modifier
 #from dotenv import load_dotenv 
 
