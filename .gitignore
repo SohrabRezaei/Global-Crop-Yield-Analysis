@@ -6,9 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
-#config.js
-#config.py
-#.env
+config.js
+config.py
+.env
 # Distribution / packaging
 .Python
 build/
