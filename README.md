@@ -48,7 +48,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Model**: GeoJSON data plotting
 
 - **How it works**: This model gets real time rainfall and temperature data of the world from OpenWeatherAPI and plots it on a world map to provide a visual representation of correlation those and the effect on crops.
-![Weather Analysis](../Schematics/wanalysis.jpg)
+
 - **Challenges**: Making the webpage dynamic by filtering the content of leaflet map.
 - **Improvements**: Plot world harvest as a heat map on the world map to further improve the immediate inferences drawn from the rainfall vs temperature maps for crop yield.
 
@@ -58,7 +58,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Model**: Machine Learning (RandomForest Regressor)
 
 - **How it works**: Get customer input and send it to the app —> app communicates with the machine learning pickle file —> ML model uses given parameters to calculate the yield and sends it back to the webpage.
-![Prediction](Schematics/ML.jpg)
+
 - **Challenges**: ML pipelining and preprocessing of users input.
 - **Improvements**: Train data to provide crop yield predictions only via environmental factors, without the need of specifying a country.
 -------------------
@@ -67,7 +67,7 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 - **Model**: Getting highest yield crops of each country for year 2013 using pandas and sqlalchemy.
 
 - **How it works**: Get customer input (country) and send it to the app —> app communicates with database —> sends back data of 3 highest yields and their historical yield plot to the webpage
-![Recommendation](Schematics/recommendation.jpg)
+
 - **Challenges**: Figuring out the API route which conncets to database and showcasing the data on front-end.
 - **Improvements**: Creating a ML model for this section which also provides the user future yield plot for the next 5 years.
 
