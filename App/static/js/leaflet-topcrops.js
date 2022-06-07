@@ -1,3 +1,4 @@
+
 var myIcon = L.icon({
     iconUrl: 'https://www.svgrepo.com/show/206227/corn.svg',
     iconSize: [40,30]
