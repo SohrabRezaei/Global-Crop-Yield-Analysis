@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Global Crop Yield Prediction</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Dashboard for your farming questions">
+    <meta name="author" content="Da Dream Team">    
+    <link rel="shortcut icon" href="../static/images/favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="../static/plugins/fontawesome/js/all.min.js"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../static/css/portal.css">
+
+</head> 
+
+<body class="app" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">   	
+    <header class="app-header fixed-top">	   	            
+        <div class="app-header-inner">  
+	        <div class="container-fluid py-2">
+		        <div class="app-header-content"> 
+		            <div class="row justify-content-between align-items-center">
+			        
+				    <div class="col-auto">
+					    <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
+						    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+					    </a>
+				    </div><!--//col-->
+		            <div class="search-mobile-trigger d-sm-none col">
+			            <i class="search-mobile-trigger-icon fas fa-search"></i>
+			        </div><!--//col-->
+		            <div class="app-search-box col">
+		                <form class="app-search-form">   
+							<input type="text" placeholder="Search..." name="search" class="form-control search-input">
+							<button type="submit" class="btn search-btn btn-primary" value="Search"><i class="fas fa-search"></i></button> 
+				        </form>
+		            </div><!--//app-search-box-->
+		                              
+                    </div><!--//app-utilities-->
+		        </div><!--//row-->
+	            </div><!--//app-header-content-->
+	        </div><!--//container-fluid-->
+        </div><!--//app-header-inner-->
+                            <!--**********************************************CLOSEABLE Side Panel**********************************************-->
+        <div id="app-sidepanel" class="app-sidepanel"> 
+            <div id="sidepanel-drop" class="sidepanel-drop"></div>
+            <div class="sidepanel-inner d-flex flex-column">
+                <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+                <div class="app-branding">
+                    <a class="app-logo" href="{{url_for('home')}}"><img class="logo-icon me-2" src="../static/images/main_logo.png" alt="logo"><span class="logo-text">Global Crop Yield</span></a>
+
+                </div><!--//app-branding-->  
+                                                                                    <!-- Nav items -->
+                <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+                    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+                        <li class="nav-item">
+                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                            <a class="nav-link" href="{{url_for('home')}}">
+                                <span class="nav-icon">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+        <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+        </svg>
+                                </span>
+                                <span class="nav-link-text">Overview</span>
+                            </a><!--//nav-link-->
+                        </li><!--//nav-item-->
+                        <li class="nav-item">
+                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                            <a class="nav-link" href="{{url_for('yield_page')}}">
+                                <span class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+        </svg>
+                                </span>
+                                <span class="nav-link-text">Yield Prediction</span>
+                            </a><!--//nav-link-->
+                        </li><!--//nav-item-->
+                        <li class="nav-item">
+                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                            <a class="nav-link" href="{{url_for('weather_analysis')}}">
+                                <span class="nav-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+        <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"/>
+        <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129zm4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377zM14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+        </svg>
+                                </span>
+                                <span class="nav-link-text">Meteorological Analysis</span>
+                            </a><!--//nav-link-->
+                        </li><!--//nav-item-->             
+                        <li class="nav-item">
+                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                            <a class="nav-link" href="{{url_for('crop_page')}}">
+                                <span class="nav-icon">
+                                <svg width="1em" height="1em" viewBox="0 0 512 512" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"/>
+        </svg>
+                                </span>
+                                <span class="nav-link-text">Crop Recommendation</span>
+                            </a><!--//nav-link-->
+                        </li><!--//nav-item-->					    
+                    </ul><!--//app-menu-->
+                </nav><!--//app-nav-->
+                                    <!--**********************************************CLOSEABLE Side Panel- Footer**********************************************-->
+                <div class="app-sidepanel-footer">
+                    <nav class="app-nav app-nav-footer">
+                        <ul class="app-menu footer-menu list-unstyled">
+                            <li class="nav-item">
+                                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                                <a class="nav-link active" href="{{url_for('our_team')}}">
+                                    <span class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+        </svg>
+                                    </span>
+                                    <span class="nav-link-text">Our Team</span>
+                                </a><!--//nav-link-->
+                            </li><!--//nav-item-->
+                            <li class="nav-item">
+                                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                                <a class="nav-link" href="https://github.com/SohrabRezaei/Global-Crop-Yield-Analysis">
+                                    <span class="nav-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+                                    </span>
+                                    <span class="nav-link-text">GitHub</span>
+                                </a><!--//nav-link-->
+                            </li><!--//nav-item-->                    
+                            <li class="nav-item">
+                                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                                <a class="nav-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/">
+                                    <span class="nav-icon">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12 1H4a1 1 0 0 0-1 1v10.755S4 11 8 11s5 1.755 5 1.755V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+            <path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+                                    </span>
+                                    <span class="nav-link-text">License</span>
+						        </a><!--//nav-link-->
+						    </li><!--//nav-item-->
+					    </ul><!--//footer-menu-->
+				    </nav>
+			    </div><!--//app-sidepanel-footer-->
+		       
+	        </div><!--//sidepanel-inner-->
+	    </div><!--//app-sidepanel-->
+    </header><!--//app-header-->
+
+
+                            <!--**********************************************Team Section**********************************************-->
+    <div class="app-wrapper">
+	<section id="speakers-section" class="speakers-section section">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">Meet our Team</h3>
+			<!-- <div class="section-intro text-center single-col-max mx-auto mb-5"></div> -->
+			<div class="row">
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../static/images/profiles/Bilal.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Bilal Rizvi</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Data Analyst</div>
+								<div class="meta">Mathematics</div>
+							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p style="color:#8A8B90;"><i>"I graduated from McGill in Fall of 2018 with a BSc in Mathematics and a minor in Economics. After graduation, I started working as an Application Support Analyst at TD. While I really liked what I was doing, I realized that my real interest and skills aligned with a field related to Mathematics. Thus, after completing my two years at TD, I decided to join the Data Analytics bootcamp offered by University of Toronto SCS to brush up and expand on my skillset. After this bootcamp, I intend on doing advanced courses in machine learning and applying my mathematical skills in this field."</i></p>
+                            </div><!--//member-desc-->
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="mailto:bilal.rizvi@mail.mcgill.ca"><i class="fab fa-google fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/bilal-haider-rizvi-34aa17173/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://github.com/brizvi4"><i class="fab fa-github fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../static/images/profiles/Neda.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Neda Ahmadi J.</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Data Analyst</div>
+								<div class="meta">Agricultural Engineering</div>
+							</div><!--//card-text-->
+                            <p style="color:#8A8B90;"><i>"After earning a bachelor degree in Agricultural Engineering from IKIU (Iran) and a Business Management Diploma here in Canada, I decided to pursue my real passion which was working with DATA! With over 3 years of experience working as Data Reporting Analyst and 2 years of experience as Customer Care Coordinator, I decided to become a professinal Data Analyst which is why I joined the University of Toronto Data Analytics Bootcamp!"</i></p>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="mailto:neda.ahmadi.jesh@gmail.com"><i class="fab fa-google fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/neda-ahmadi-j/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://github.com/nedaaj"><i class="fab fa-github fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../static/images/profiles/Rabab.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Rabab Handa</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Data Engineer</div>
+								<div class="meta">Mechanical Engineering</div>
+							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p style="color:#8A8B90;"><i>"I have over 3 years of combined experience in Manufacturing and Project Management. I earned my bachelors from University of Toronto in Mechanical Engineering with a focus on Mechatronics and Sustainable Energy. I have Six Sigma and Green Belt certification and have employed the KT-method for problem solving over various projects. I have worked in the Aerospace and the Automotive industry and am currently working in Canada's Nuclear Energy sector"</i></p>
+                            </div><!--//member-desc-->
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="mailto:rababhanda2@gmail.com"><i class="fab fa-google fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/rabab-handa/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://github.com/RababHanda"><i class="fab fa-github fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../static/images/profiles/Sohrab.jpeg" class="card-img-top rounded img-fluid" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Sohrab Rezaei</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Data Analyst</div>
+								<div class="meta">Chemical Engineering</div>
+							</div><!--//card-text-->
+                            <div class="member-desc">
+                                <p style:="color: #8A8B90;"><i>"I got my bachelor's in Chemical Engineering from Iran. I then moved to Canada in 2019 in order to obtain a master's in Chemical Engineering from Western University specializing in Environmental & Green Engineering. I began working as a construction project coordinator last year. However, after discovering Canada's data science market demand and recognizing my aptitude for working in such a field, I decided to join this Bootcamp."</i></p>
+                            </div><!--//member-desc-->
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="mailto:Sohrabrezaei1372@gmail.com"><i class="fab fa-google fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/sohrabrezaei/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://github.com/SohrabRezaei"><i class="fab fa-github fa-fw"></i></a></li>
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+			</div><!--//row-->
+			<div class="speakers-cta text-center py-3"><a class="btn btn-primary btn-lg" href="{{url_for('home')}}" target="_blank">Explore our Project!</a></div>
+		</div><!--//container-->
+		
+	</section><!--//speakers-section-->
+    </div><!--//app-wrapper-->
+
+
+    <!-- Javascript -->          
+    <script src="../static/plugins/popper.min.js"></script>
+    <script src="../static/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+    <!-- Charts JS -->
+    <script src="../static/plugins/chart.js/chart.min.js"></script> 
+    <script src="../static/js/index-charts.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="../static/js/app.js"></script> 
+
+</body>
+</html> 

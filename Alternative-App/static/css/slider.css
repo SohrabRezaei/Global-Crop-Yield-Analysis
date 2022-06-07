@@ -1,0 +1,133 @@
+/* Temperature */
+.tempcontainer {
+    width: 100%;
+  }
+  
+  .temp {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, yellow, red);
+    outline-style: solid; 
+    outline-width: 0.5px;
+    outline-color: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .temp:hover {
+    opacity: 1;
+  }
+  
+  .temp::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 30px;
+    border: 0;
+    background: url('../images/SVG/thermometer-half.svg');
+    cursor: pointer;
+  }
+  
+  .temp::-moz-range-thumb {
+    width: 15px;
+    height: 30px;
+    border: 0;
+    background: url('../images/SVG/thermometer-half.svg');
+    cursor: pointer;
+  }
+
+
+/* Rainfall */
+.raincontainer {
+    width: 100%;
+  }
+  
+  .rain {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, LightCyan, blue);
+    outline-style: solid; 
+    outline-width: 0.5px;
+    outline-color: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .rain:hover {
+    opacity: 1;
+  }
+  
+  .rain::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 23px;
+    border: 0;
+    background: url('../images/SVG/cloud-showers-heavy.svg');
+    cursor: pointer;
+  }
+  
+  .rain::-moz-range-thumb {
+    width: 23px;
+    height: 23px;
+    border: 0;
+    background: url('../images/SVG/cloud-showers-heavy.svg');
+    cursor: pointer;
+  }
+
+
+/* Pesticide */
+.pestcontainer {
+    width: 100%;
+  }
+  
+  .pest {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, beige, rgb(95, 19, 19));
+    outline-style: solid; 
+    outline-width: 0.5px;
+    outline-color: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .pest:hover {
+    opacity: 1;
+  }
+  
+  .pest::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 19px;
+    border: 0;
+    background: url('../images/SVG/virus-slash.svg');
+    cursor: pointer;
+  }
+  
+  .pest::-moz-range-thumb {
+    width: 24px;
+    height: 19px;
+    border: 0;
+    background: url('../images/SVG/virus-slash.svg');
+    cursor: pointer;
+  }
+
+#predictionDisplay {
+
+  color: black;
+  font-size: 170%;
+  margin: 50px;
+  background-color: rgb(213, 247, 222);
+
+}
