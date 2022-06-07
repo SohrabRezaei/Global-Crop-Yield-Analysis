@@ -3,6 +3,9 @@
 #################################################
 #from asyncio.windows_utils import pipe
 import os
+
+os.chdir('App')
+
 from flask import (Flask, render_template, jsonify, request, redirect,url_for)
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -15,9 +18,9 @@ import pandas as pd
 import pickle
 import numpy as np
 #from config import password
-import App.class_modifier
-from .class_modifier import Country_modifier
+from class_modifier import Country_modifier
 #from dotenv import load_dotenv 
+
 
 
 # Flask Setup
@@ -40,7 +43,7 @@ Base.prepare(engine, reflect=True)
 session = Session(engine)
 
 # Machine Learning Model 
-with open(r"App/model_pickle.pkl", "rb") as input_file:
+with open(r"model_pickle.pkl", "rb") as input_file:
    model = pickle.load(input_file)
 
 
