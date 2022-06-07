@@ -98,10 +98,6 @@ def crop_recommendation():
     return(country_json)
 
 
-@app.route("/api/cropchart")
-def crop_chart():
-    return()
-
 # **************************Our Team****************************
 @app.route("/our_team")
 def our_team():
