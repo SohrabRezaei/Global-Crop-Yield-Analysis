@@ -9,7 +9,7 @@ var topCountries = [{
         "url":"https://raw.githubusercontent.com/SohrabRezaei/Global-Crop-Yield-Analysis/main/App/assets/images/SVG/Flags/iran-svgrepo-com.svg"
     }},{
     "type": "Feature",
-    "properties": {"country": "USA"},
+    "properties": {"country": "United States of America"},
     "geometry": {
         "type": "Point",
         "coordinates":
@@ -153,7 +153,7 @@ var topCountries = [{
     }  
     },{
     "type": "Feature",
-    "properties": {"country": "UK"},
+    "properties": {"country": "United Kingdom"},
     "geometry": {
         "type": "Point",
         "coordinates":
