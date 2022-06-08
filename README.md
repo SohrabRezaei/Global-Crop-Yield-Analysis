@@ -36,6 +36,12 @@ In 2030, almost *660 million people* may still be hungry. Hunger will not be era
 
 We picked top 20 most populated countries of the world to analyze this issue at a macroscopic level and present suggestions that can be implemented to prevent the growing gap between world hunger and crop yield.
 
+
+
+https://user-images.githubusercontent.com/95254809/172693049-41274735-1762-47dd-ba8f-44de1af0a235.mp4
+
+
+
 ## Source Data
 Original datasets for this project were taken from Kaggle: [Crop_Yield_Prediction_Dataset](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset?select=yield.csv)
 
