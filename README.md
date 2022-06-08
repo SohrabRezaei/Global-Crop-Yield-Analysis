@@ -60,7 +60,11 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 
 - **How it works**: This model gets real time rainfall and temperature data of the world from OpenWeatherAPI and plots it on a world map to provide a visual representation of correlation those and the effect on crops.
 
-*here comes the website gif*
+
+
+https://user-images.githubusercontent.com/95254809/172705363-5c938e7f-8a07-4ba4-8390-44f90353c969.mp4
+
+
 
 - **Challenges**: Making the webpage dynamic by filtering the content of leaflet map.
 - **Improvements**: Plot world harvest as a heat map on the world map to further improve the immediate inferences drawn from the rainfall vs temperature maps for crop yield.
@@ -97,7 +101,11 @@ https://user-images.githubusercontent.com/95254809/172693874-8b211d1e-af37-4cb4-
 
 - **How it works**: Get customer input (country) and send it to the app —> app communicates with database —> sends back data of 3 highest yields and their historical yield plot to the webpage.
 
-*here comes the website gif*
+
+
+https://user-images.githubusercontent.com/95254809/172705404-22a37f06-728e-4e8b-ba1e-e0f1293cbc96.mp4
+
+
 
 - **Challenges**: Figuring out the API route which conncets to database and showcasing the data on front-end.
 - **Improvements**: Creating a ML model for this section which also provides the user future yield plot for the next 5 years.
