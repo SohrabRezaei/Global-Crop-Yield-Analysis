@@ -3,9 +3,6 @@
 #################################################
 #from asyncio.windows_utils import pipe
 import os
-
-os.chdir('App')
-
 from flask import (Flask, render_template, jsonify, request, redirect,url_for)
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -18,20 +15,17 @@ import pandas as pd
 import pickle
 import numpy as np
 #from config import password
-from App.myclass.class_modifier import Country_modifier
-#from dotenv import load_dotenv 
-
-
+from class_modifier import Country_modifier
 
 
 # Flask Setup
 app = Flask(__name__)
 
-# load_dotenv()
+
 #################################################
 # Database Setup
 #######################################################################
-engine = create_engine(f"postgresql://sohrabrezaei:{os.environ['password']}@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
+engine = create_engine(f"postgresql://sohrabrezaei:Teamnerd123-_-@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
 
 Base = automap_base()
