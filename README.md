@@ -77,7 +77,11 @@ Original datasets for this project were taken from Kaggle: [Crop_Yield_Predictio
 
 - **How it works**: Get customer input and send it to the app —> app communicates with the machine learning pickle file —> ML model uses given parameters to calculate the yield and sends it back to the webpage.
 
-*here comes the website gif*
+
+
+https://user-images.githubusercontent.com/95254809/172693874-8b211d1e-af37-4cb4-a8b3-8d734d23db97.mp4
+
+
 
 - **Challenges**: ML pipelining and preprocessing of users input.
 - **Improvements**: Train data to provide crop yield predictions only via environmental factors, without the need of specifying a country.
