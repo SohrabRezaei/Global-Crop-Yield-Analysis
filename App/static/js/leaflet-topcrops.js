@@ -76,9 +76,10 @@ d3.json(url).then(cropData=>{
 const cropBox = d3.select("#cropbox");
 const threeRecoms = d3.select('#threeRecoms');
 var tbody = d3.select("tbody");
+const cropChart = d3.select("cropChart");
 
 const showCountry=(countryName)=>{
-    console.log(cropRecom[countryName])
+    // console.log(cropRecom[countryName])
     cropBox.html(countryName)
     buildTable(cropRecom, countryName)
     ;
@@ -88,9 +89,11 @@ topCountries.forEach(function(country) {
     L.marker(country.geometry.coordinates,{icon:myIcon}).addTo(map).on('click',()=>showCountry(country.properties.country));
 });
 
-function buildTable(countryCropYeild, countryName) {
+function buildTable(countryCropYield, countryName) {
     tbody.html("");
-    const data = countryCropYeild[countryName]; 
+    const data = countryCropYield[countryName];
+    // console.log(data);
+    // console.log(yticks);
     Object.entries(data).forEach((crop) => {
         let row = tbody.append("tr");
             row.text(crop[0]);
@@ -98,3 +101,69 @@ function buildTable(countryCropYeild, countryName) {
             cell.text(crop[1]);
         });
     };
+function buildChart(countryCropYield, countryName) {    
+    const data2 = countryCropYield[countryName];
+    xticks=Object.keys(data2);
+    yticks=Object.values(data2);
+    var myChart = new Chart('cropChart', {
+        type: "bar",
+        data: {
+            labels: xticks,
+            datasets: [{
+                data: yticks
+              }]
+        },
+      });
+    };
+
+
+// Alternative Code:
+// ############# Recommendation section ###########//
+// Data source
+// const url = '/api/crops';
+// var cropRecom;
+// d3.json(url).then(cropData=>{
+//     cropRecom=cropData;
+// });
+
+// const cropBox = d3.select("#cropbox");
+// const threeRecoms = d3.select('#threeRecoms');
+// var tbody = d3.select("tbody");
+// // const cropChart = d3.select("cropChart");
+
+// const showCountry=(countryName)=>{
+//     // console.log(cropRecom[countryName])
+//     cropBox.html(countryName)
+//     buildTable(cropRecom, countryName)
+//     // buildChart(cropRecom, countryName)
+//     ;
+// };
+
+// topCountries.forEach(function(country) {
+//     L.marker(country.geometry.coordinates,{icon:myIcon}).addTo(map).on('click',()=>showCountry(country.properties.country));
+// });
+
+// function buildTable(countryCropYeild, countryName) {
+//     tbody.html("");
+//     const data = countryCropYeild[countryName];
+//     // console.log(data);
+//     xticks=Object.keys(data);
+//     yticks=Object.values(data);
+//     // console.log(yticks);
+//     Object.entries(data).forEach((crop) => {
+//         let row = tbody.append("tr");
+//             row.text(crop[0]);
+//         let cell = row.append("td");
+//             cell.text(crop[1]);
+//         });
+//     var barData = [{
+//         x: xticks,
+//         y: yticks,
+//         type: "bar",
+//         // orientation: "h"
+//     }];
+//     var barLayout = {
+//         title: "Top 3 Crops Yield (hg/ha)"};
+        
+//     // Plotly.newPlot("cropChart", barData, barLayout);    
+//     };
