@@ -36,12 +36,17 @@
 		            <div class="search-mobile-trigger d-sm-none col">
 			            <i class="search-mobile-trigger-icon fas fa-search"></i>
 			        </div><!--//col-->
-		            <div class="app-search-box col">
+
+					<marquee><h5>Hello Hi How are you???</h5></marquee>
+
+
+
+		            <!-- <div class="app-search-box col">
 		                <form class="app-search-form">   
 							<input type="text" placeholder="Search..." name="search" class="form-control search-input">
 							<button type="submit" class="btn search-btn btn-primary" value="Search"><i class="fas fa-search"></i></button> 
 				        </form>
-		            </div><!--//app-search-box-->
+		            </div>//app-search-box -->
 		                              
                     </div><!--//app-utilities-->
 		        </div><!--//row-->
@@ -74,17 +79,6 @@
                         </li><!--//nav-item-->
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                            <a class="nav-link" href="{{url_for('yield_page')}}">
-                                <span class="nav-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
-            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
-        </svg>
-                                </span>
-                                <span class="nav-link-text">Yield Prediction</span>
-                            </a><!--//nav-link-->
-                        </li><!--//nav-item-->
-                        <li class="nav-item">
-                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link" href="{{url_for('weather_analysis')}}">
                                 <span class="nav-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-cloud-sun" viewBox="0 0 16 16">
@@ -94,7 +88,18 @@
                                 </span>
                                 <span class="nav-link-text">Meteorological Analysis</span>
                             </a><!--//nav-link-->
-                        </li><!--//nav-item-->             
+                        </li><!--//nav-item--> 
+                        <li class="nav-item">
+                            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                            <a class="nav-link" href="{{url_for('yield_page')}}">
+                                <span class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+        </svg>
+                                </span>
+                                <span class="nav-link-text">Yield Prediction</span>
+                            </a><!--//nav-link-->
+                        </li><!--//nav-item-->            
                         <li class="nav-item">
                             <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                             <a class="nav-link" href="{{url_for('crop_page')}}">

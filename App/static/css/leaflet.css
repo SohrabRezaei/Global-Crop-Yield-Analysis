@@ -15,3 +15,15 @@ body,
   padding: 0;
   margin: 0;
 }
+
+/* Formatting tables */
+table, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 2.5px;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: #e1f6e1;
+}

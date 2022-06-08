@@ -1,7 +1,7 @@
 #################################################
 # Import Dependencies
 #################################################
-from asyncio.windows_utils import pipe
+#from asyncio.windows_utils import pipe
 import os
 from flask import (Flask, render_template, jsonify, request, redirect,url_for)
 import sqlalchemy
@@ -14,19 +14,18 @@ import psycopg2
 import pandas as pd
 import pickle
 import numpy as np
-from config import password
+#from config import password
 from class_modifier import Country_modifier
-# from dotenv import load_dotenv 
 
 
 # Flask Setup
 app = Flask(__name__)
 
-# load_dotenv()
+
 #################################################
 # Database Setup
 #######################################################################
-engine = create_engine(f"postgresql://sohrabrezaei:{password}@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
+engine = create_engine(f"postgresql://sohrabrezaei:Teamnerd123-_-@project.cqupc8fzrokq.us-east-1.rds.amazonaws.com:5432/Global_Crop_Yield_Analysis", echo=False)
 
 
 Base = automap_base()
