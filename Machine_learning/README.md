@@ -11,8 +11,7 @@ Once the final model is decided, we create a pipeline of the model. Creating a p
 
 <p align="center">
   <img src="https://github.com/NedaAJ/Global-Crop-Yield-Analysis/blob/main/Machine_learning/ML_Model_Flowchart.PNG"
-  width="600" 
-  height=auto class="rounded">
+  class="rounded">
 </p>
 
 
