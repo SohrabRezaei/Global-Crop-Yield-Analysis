@@ -9,5 +9,10 @@ Finally, we our going to incorporate the test data we set aside at the very star
 
 Once the final model is decided, we create a pipeline of the model. Creating a pipeline is necessary for us since we are taking user input and we would like all the pre processing steps (like one hot encoding and standardizing data) to be applied to the inputted data as well. Pipelines also prove to be beneficial when deploying code on website and this is exactly what we are doing in our project. After creating a pipeline of the model, the pipeline is dumped into a pickle file. This pickle file is later loaded into the app.py file. When the users input their values into the dashboard, their values will be pre processed just like the training data and then they will see a predicted value of the crop yield.  
 
+<p align="center">
+  <img src="https://github.com/NedaAJ/Global-Crop-Yield-Analysis/blob/main/Machine_learning/ML_Model_Flowchart.PNG"
+  width="600" 
+  height=auto class="rounded">
+</p>
 
 
