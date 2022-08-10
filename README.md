@@ -7,9 +7,8 @@
 
 🚧🚧🚧 **This project is still in progress** 🚧🚧🚧
 
-**Deploy** : 🔜 Our Deployment Link will be posted here!
 
-**Checkout the presentation here**: [Global Crop Yield Analysis Presentation](https://docs.google.com/presentation/d/1IRI6LFxQkQMSdlPyFniTKJjYMbloIk532eeUkKgtX3I/edit?usp=sharing)
+**Checkout the presentation here**: [Global Crop Yield Analysis Presentation](https://docs.google.com/presentation/d/1nanD8zwW19zC2t44_9e1eAxqe1GE8V2KxEYgPKlcXRA/edit#slide=id.g13270622d1d_0_122)
 
 # Table of Content
 1. [Project Overview](#Project-Overview)
